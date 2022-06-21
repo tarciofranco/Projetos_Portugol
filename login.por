@@ -33,6 +33,7 @@ programa
 		}
 	}
 
+	//Funcao para validar o login/senha do usuario
 	funcao inteiro login(){
 		cadeia usuario, senha
 		escreva("--------------------------------- \n")
@@ -47,10 +48,8 @@ programa
 		}senao{
 			escreva("Usuario/Senha incorretos \n")
 			retorne 0
-		}
-		
+		}	
 	}
-
 	
 }
 /* $$$ Portugol Studio $$$ 
@@ -58,7 +57,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 150; 
+ * @POSICAO-CURSOR = 207; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
