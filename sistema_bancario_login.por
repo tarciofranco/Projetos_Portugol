@@ -1,11 +1,13 @@
 programa
 {
+	//Inclui Bibliotecas
+	inclua biblioteca Util --> u
 	
 	funcao inicio()
 	{
 		//Variaveis de controle
 		inteiro retorno, contador
-		contador = 0
+		contador = 1
 
 		//Loop para verificar tentativas de acerto de login
 		faca{
@@ -27,9 +29,12 @@ programa
 			escreva("Bem Vindo! \n")
 
 			//Chamada da funcao PIX
+			u.aguarde(100)
 			pix()
 		}
 	}
+	
+	
 
 	//Funcao para validar o login/senha do usuario
 	funcao inteiro login(){
@@ -49,6 +54,7 @@ programa
 		}	
 	}
 
+	//Funcao PIX
 	funcao pix(){
 				//Variaveis para o PIX
 		real ValorMov, SaldoBancario, LimitePIX, SaldoAgendamento
@@ -69,16 +75,16 @@ programa
 		//Etapa 01 - Receber valores do usuario
 		escreva("Informe o Tipo de Chave PIX do Destinatario: ", "\n")
 		escreva("1 = CPF, 2 = Telefone, 3 = Chave Aleatoria", "\n")
-		leia(TipoChave);		
+		leia(TipoChave)		
 		
 		//Validar tipo de chave
 		se(TipoChave == "1" ou TipoChave == "2"  ou TipoChave == "3"){
 			//
 			escreva("Informe o destinatario PIX: ", "\n")
-			leia(ChavePDest);
+			leia(ChavePDest)
 	
 			escreva("Valor da Movimentação: ", "\n")
-			leia(ValorMov);
+			leia(ValorMov)
 			
 			escreva("PIX agendado? S=Sim ou N=Não", "\n")
 			leia(agendamento)
@@ -137,7 +143,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 657; 
+ * @POSICAO-CURSOR = 717; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
