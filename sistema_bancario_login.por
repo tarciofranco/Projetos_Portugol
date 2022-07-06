@@ -26,10 +26,10 @@ programa
 		//login correto, acesso ao sistema
 		se(retorno == 1){
 			limpa() //Limpa mensagens anteriores
-			escreva("Bem Vindo! \n")
-
+			escreva("Bem Vindo! Usuário \n")
+			
 			//Chamada da funcao PIX
-			u.aguarde(100)
+			u.aguarde(300)
 			pix()
 		}
 	}
@@ -46,7 +46,7 @@ programa
 		leia(senha)
 		escreva("--------------------------------- \n")
 		
-		se(usuario == "admin" e senha == "1234"){			
+		se(usuario == "USUARIO" e senha == "1234"){			
 			retorne 1
 		}senao{
 			escreva("Usuario/Senha incorretos \n")
@@ -98,6 +98,24 @@ programa
 					//PIX agendado
 					escreva("Data para agendamento: ", "\n")
 					leia(DataAgendamento)
+					se(ValorMov <= SaldoBancario){
+						//Verifica Limit PIX
+						se(ValorMov <= LimitePIX){							
+							//funcao vazio aguarde(1000);
+							SaldoBancario = (SaldoBancario - ValorMov)							
+							escreva("---------------------------------------", "\n")
+							escreva("|         COMPROVANTE PIX             |", "\n")
+							escreva("| Agendamento realizado com sucesso   |", "\n")
+							escreva("---------------------------------------", "\n")
+							escreva("# PIX Destinatario: ", ChavePDest  , "\n")
+							escreva("# Valor da Transação: R$ ", ValorMov , "\n")
+							escreva("# Data Agendamento:  ", DataAgendamento , "\n")
+							escreva("---------------------------------------", "\n")
+							
+						}senao{
+							escreva("O valor da movimentação excede o valor de limite do PIX: ", LimitePIX )
+						}	
+					}				
 					
 				se(ValorMov <= LimitePIX){
 					//Executar o agendamento e atualizar o saldo agendamento
@@ -143,7 +161,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 717; 
+ * @POSICAO-CURSOR = 3146; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

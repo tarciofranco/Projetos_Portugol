@@ -1,23 +1,25 @@
 programa
 {
-	
+	inclua biblioteca Util --> u	
 	funcao inicio()
 	{
 		real v1, v2, v3, media
 		
-		escreva("# Calculo média simples # \n")
-		escreva("Descircao do problema ...... \n")
-		escreva("Informe o valor para primeira parte do trajeto \n")
+		escreva("# Projeto 1: Calculo de média sobre o trajeto percorrido # \n")
+		escreva("Informe a velocidade da 1º terça parte do trajeto: \n")
 		leia(v1)
-		escreva("Informe o valor para segunda parte do trajeto \n")
+		escreva("Informe a velocidade da 2º terça parte do trajeto: \n")
 		leia(v2)
-		escreva("Informe o valor para terceira parte do trajeto \n")
+		escreva("Informe a velocidade da 2º terça parte do trajeto: \n")
 		leia(v3)
-
+		limpa()
+		escreva("Calculando Velocidade Média ... \n")
+		u.aguarde(800)
+		
+		//Calculando 
 		media = (v1 + v2 + v3 ) / 3
 
-		escreva("Media simples do trajeto = ", media , "\n")
-		
+		escreva("Velocidade média do trajeto --> ", media , "\n")
 		
 	}
 }
@@ -26,7 +28,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 441; 
+ * @POSICAO-CURSOR = 86; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
